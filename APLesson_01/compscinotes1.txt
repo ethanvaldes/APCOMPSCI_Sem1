@@ -1,0 +1,17 @@
+﻿escape characters in java
+* a character with a backslash (\) before it
+* it has a special meaning to the compiler and will not print verbatim
+* ex:
+* \t (inserts a tab)
+* \b (inserts a backspace)
+* \n (inserts a newline
+* \r (inserts a carriage return)
+* \f (inserts a formfeed)
+* \’ (inserts a single quotation mark)
+* \” (inserts a double quotation mark)
+* \\ (inserts a backslash)
+
+
+ASCII art
+* graphic design technique that uses computers to combine different sequences of 95 printable characters in order to form pictures
+* basically text based art
