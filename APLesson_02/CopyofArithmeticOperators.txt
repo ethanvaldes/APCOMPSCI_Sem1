@@ -1,0 +1,15 @@
+﻿Fill in the descriptions below for each operator. You can use this in the future as a reference guide to help you with your labs. 
+
+
+Operator
+	Description
+	+
+	Additive operator (adds values on either side of the operator)
+	-
+	Subtraction operator (subtracts value on right side of operator from value on left side)
+	*
+	Multiplication operator (multiplies values on either side of operator)
+	/
+	Division operator (divides value on left side of operator by value on right side)
+	%
+	Remainder operator (divides value on left side of operator by value on right side and gives the remainder)

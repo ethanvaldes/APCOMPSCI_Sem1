@@ -4,9 +4,8 @@ public class Lesson_02
 	{
 		int x = 3;
 		int y = 2;
-		int s = 3 * 2;
 		
-		System.out.println(x + " multiplied by " + y + " is " + s);
+		System.out.println(x + " multiplied by " + y + " is " + x * y);
 
 		String name = "Ethan Valdes";
 		String address = "615 E Circle Dr";
@@ -16,11 +15,12 @@ public class Lesson_02
 		
 		System.out.println (name);
 		System.out.println (address);
-		System.out.println (city + "," + state + " " + zip);
+		System.out.println (city + ", " + state + " " + zip);
 		
 		int l = 10;
 		int h = 5;
 		int w = 2;
 		
+		System.out.println("The surface area of your rectangle is " + l * h * w);
 	}
 }
