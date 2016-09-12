@@ -2,21 +2,21 @@ import java.util.Scanner;
 
 public class EX_02
 {
-	public static void main (Strin[]args)
+	public static void main (String[]args)
 	{
 		Scanner keyboard = new Scanner(System.in);
 		
-		System.out.println("hi im gonna calculate ur bmi bc as hilary duff once said, why not?");
-		System.out.println("How tall are you in inches?");
+		System.out.println("Hi! I\'m gonna calculate your BMI.");
+		System.out.println("First, how tall are you in inches?");
 		
-		int h = keyboard.next();
+		double h = keyboard.nextDouble();
 		
 		System.out.println("Cool. Now how much do you weigh in pounds?");
 		
-		int w = keyboard.next();
+		double w = keyboard.nextDouble();
 		int c = 703;
-		int i = h * h;
+		double i = h * h;
 		
-		System.out.println("Sick!! Your BMI is " + w * c / i + "." thx ttyl.");
+		System.out.println("Nice!! Your BMI is " + w * c / i + "." + " Thanks.");
 	}
 }
