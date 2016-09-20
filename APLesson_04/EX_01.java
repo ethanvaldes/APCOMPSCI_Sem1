@@ -6,7 +6,7 @@ public class EX_01
 	{
 		Scanner kb = new Scanner(System.in);
 		
-		Lesson_04 form = new Lesson_04();
+		EX_01 form = new EX_01();
 		
 		System.out.println("Please enter item 1:");
 		String item1 = kb.nextLine();
@@ -26,23 +26,37 @@ public class EX_01
 		String item3 = kb.nextLine();
 		
 		System.out.println("Please enter the price:");
-		double item3 = kb.nextDouble();
+		double price3 = kb.nextDouble();
 		
-		form.format (item1, price1, item2, price2, item3, price3);
+		String haha1 = "Subtotal";
+		String haha2 = "Tax";
+		String haha3 = "Total";
+		
+		double total1 = price1+price2+price3;
+		double total2 = .07*total1;
+		double total3 = total1+total2;
+		
+		
+		System.out.println("<<<<<<<<<<<<<<<__Receipt__>>>>>>>>>>>>>>>>");
+		form.format (item1, price1);
+		form.format (item2, price2);
+		form.format (item3, price3);
+		System.out.println("\n");
+		form.format1 (haha1, total1);
+		form.format1 (haha2, total2);
+		form.format1 (haha3, total3);
+		System.out.println("\n__________________________________________");
+		System.out.println(" * Thank you for your support *");
 	}
 	
-	public void format(String itema, double pricea, String itemb, double priceb, String itemc, double pricec);
+	public void format(String item, double price)
 	{
-		System.out.println("<<<<<<<<<<<<<<<__Receipt__>>>>>>>>>>>>>>>>");
-		System.out.printf("\n\n\n*  %15s ........      %3f.2", itema, pricea);
-		System.out.printf("\n*  %15s ........      %3f.2", itemb, priceb);
-		System.out.printf("\n*  %15s ........      %3f.2", itemc, pricec);
-		System.out.printf("\n\n\n*  %15s ........      %3f.2", "Subtotal", pricea+priceb+pricec);
-		System.out.printf("\n*  %15s ........      %3f.2", "Tax", 0.63);
-		System.out.printf("\n*  %15s ........      %3f.2", "Total", pricea+priceb+pricec+0.63);
-		System.out.println("__________________________________________");
-		System.out.println(" * Thank you for your support *");
-		
-		
+		System.out.printf("\n*  %15s ........      %3.2f", item, price);
+
+	}
+	
+	public void format1(String haha, double total)
+	{
+		System.out.printf("\n*  %15s ........      %3.2f", haha, total);
 	}
 }
