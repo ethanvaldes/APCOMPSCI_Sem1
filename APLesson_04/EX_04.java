@@ -6,28 +6,24 @@ public class EX_04
 	{
 		Scanner kb = new Scanner(System.in);
 		
-		EX_04 formula = new EX_04();
+		EX_04 vol = new EX_04();
 		
-		System.out.println("We\'re going to calculate the total payment on your loan!");
-		System.out.println("What is the original amount you intend to borrow?");
-		double price = kb.nextDouble();
+		System.out.println("What is the height of your box in inches?");
+		double height = kb.nextDouble();
 		
-		System.out.println("What is the interest rate?");
-		double intrate = kb.nextDouble();
+		System.out.println("What is the length of your box in inches?");
+		double length = kb.nextDouble();
 		
-		System.out.println("How many times is it compounded per year?");
-		double year = kb.nextInt();
-		double year12 = year/12;
+		System.out.println("What is the width of your box in inches?");
+		double width = kb.nextDouble();
 		
-		System.out.println("What is the total life of the loan in years?");
-		double life = kb.nextInt();
+		double volume = vol.calcvol(height, length, width);
 		
-		double total = formula.calcformula(price, intrate, year12, life);
-		System.out.printf("Your total monthly payment is $%6.2f\n", total);
+		System.out.println("The volume of your box is " + volume + " cubic feet.");
 	}
 	
-	public double calcformula(double principal, double rate, double compounded, double life)
+	public double calcvol(double h, double l, double w)
 	{
-		return (Math.pow(principal*(1+(rate/compounded)), (compounded*life)));
+		return (h*l*w)/1728;
 	}
 }
