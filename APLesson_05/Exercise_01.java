@@ -1,13 +1,18 @@
 import java.util.Random;
 public class Exercise_01
 {
+	static String winner;
+	static int player;
+	static int comp;
+	
 	public static void main(String[]args)
 	{
 		Random rand = new Random();
-		int player = rand.nextInt(6) + 1;
-		int comp = rand.nextInt(6) + 1;
+		Exercise_01 calculate = new Exercise_01();
+		player = rand.nextInt(6) + 1;
+		comp = rand.nextInt(6) + 1;
 		
-		rollDice();
+		winner = calculate.rollDice();
 
 		System.out.println("You rolled a " + player);
 		System.out.println("Computer rolled a " + comp);
@@ -15,14 +20,14 @@ public class Exercise_01
 		
 	}	
 	
-	public static boolean rollDice()
+	public static String rollDice()
 	{
 		if(player > comp)
-			return String winner = "you!";
+			return "you!";
 		if(comp > player)
-			return String winner = "the computer!";
-		if (comp == player)
-			return String winner = "no one. You tied!";
+			return "the computer!";
+		else
+			return "no one. You tied!";
 	}
 	
 }
