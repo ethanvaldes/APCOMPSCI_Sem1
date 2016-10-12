@@ -17,7 +17,6 @@ public class Exercise_02
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
-		Exercise_02 calculate = new Exercise_02();
 		Exercise_02 form = new Exercise_02();
 		
 		System.out.println("What is your first item?");
@@ -40,7 +39,7 @@ public class Exercise_02
 		System.out.println("Please enter the price of " + item4 + ".");
 		price4 = kb.nextDouble();
 		subtotal = price1+price2+price3+price4;
-		discount = calculate.discount();
+		discount = discount();
 		tax = .075*(subtotal);
 		total = subtotal - discount + tax;
 

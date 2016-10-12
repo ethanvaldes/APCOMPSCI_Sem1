@@ -8,11 +8,10 @@ public class Exercise_01
 	public static void main(String[]args)
 	{
 		Random rand = new Random();
-		Exercise_01 calculate = new Exercise_01();
 		player = rand.nextInt(6) + 1;
 		comp = rand.nextInt(6) + 1;
 		
-		winner = calculate.rollDice();
+		winner = rollDice();
 
 		System.out.println("You rolled a " + player);
 		System.out.println("Computer rolled a " + comp);
@@ -28,6 +27,12 @@ public class Exercise_01
 			return "the computer!";
 		else
 			return "no one. You tied!";
+	}
+	
+	public void format(String item, double price)
+	{
+		System.out.printf("\n*  %15s ........      %3.2f", item, price);
+
 	}
 	
 }
