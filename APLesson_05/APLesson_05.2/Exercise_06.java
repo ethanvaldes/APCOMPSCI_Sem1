@@ -4,6 +4,8 @@ public class Exercise_06
 	static Scanner kb;
 	static String username;
 	static String password;
+	static String pass;
+	static String user;
 	
 	public static void main(String[]args)
 	{
@@ -17,9 +19,10 @@ public class Exercise_06
 	public static void passCheck()
 	{
 		System.out.println("Please enter your username:");
-		String pass = kb.next();
+		user = kb.next();
 		System.out.println("Please enter your password:");
-		String user = kb.next();
+		pass = kb.next();
+		
 		if(password.equals(pass) && username.equals(user))
 		{
 			System.out.println("You are granted access!");
@@ -32,7 +35,7 @@ public class Exercise_06
 				passCheck();
 			}
 			
-			if(username.equals(user))
+			else if(username.equals(user))
 			{
 				System.out.println("Your password is incorrect!");
 				passCheck();
