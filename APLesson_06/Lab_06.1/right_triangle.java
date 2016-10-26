@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class left_triangle
+public class right_triangle
 {
 	public static void main(String[]args)
 	{
@@ -7,7 +7,7 @@ public class left_triangle
 		System.out.println("Please enter a word: ");
 		String word = kb.next();
 		
-		for(int i = 0; i <= word.length(); i++)
+		for(int i = word.length(); i >= 0; i--)
 		{
 			System.out.println(word.substring(i));
 			
