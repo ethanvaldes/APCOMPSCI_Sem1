@@ -28,6 +28,7 @@ public class EX_03
 	
 	public double calcformula(double principal, double rate, double compounded, double life)
 	{
-		return (Math.pow(principal*(1+(rate/compounded)), (compounded*life)));
+		double total = (Math.pow(principal*(1+(rate/compounded)), (compounded*life)));
+		return total/(12*life);
 	}
 }
