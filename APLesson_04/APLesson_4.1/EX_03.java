@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class EX_03
 {
+	static double total;
+	
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
@@ -17,18 +19,16 @@ public class EX_03
 		
 		System.out.println("How many times is it compounded per year?");
 		double year = kb.nextInt();
-		double year12 = year/12;
 		
 		System.out.println("What is the total life of the loan in years?");
 		double life = kb.nextInt();
-		
-		double total = formula.calcformula(price, intrate, year12, life);
-		System.out.printf("Your total monthly payment is $%6.2f\n", total);
+
+		System.out.printf("Your total monthly payment is $%6.2f\n", calcformula(price, intrate, year, life));
 	}
 	
-	public double calcformula(double principal, double rate, double compounded, double life)
+	public static double calcformula(double p, double r, double n, double t)
 	{
-		double total = (Math.pow(principal*(1+(rate/compounded)), (compounded*life)));
-		return total/(12*life);
+		total = p*(Math.pow(1+r/n, n * t));
+		return total/(12*t);
 	}
 }
