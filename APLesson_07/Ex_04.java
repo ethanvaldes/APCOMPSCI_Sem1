@@ -6,7 +6,7 @@ public class Ex_04
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
-		System.out.println("Please enter a number: ");
+		System.out.println("Please enter a sentence: ");
 		sentence = kb.nextLine();
 		
 		while(sentence.indexOf("a") >= 0)
