@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class scorchtrials
+public class distancebetween2pointsrunner
 {
 	public static void main(String[]args)
 	{
@@ -13,16 +13,16 @@ public class scorchtrials
 		System.out.println("Please enter a value for for y2: ");
 		int y2 = kb.nextInt();
 		
-		scorchtrials object = new scorchtrials(x1, y1, x2, y2);
+		distancebetween2points object = new distancebetween2points(x1, y1, x2, y2);
 		
-		System.out.println("The distance between (" + object.getxOne() + "," + object.getyOne() + ") and (" + object.getxTwo() + "," + object.getyTwo() + ") is " + object.getdist());
+		System.out.println("The distance between (" + object.getxOne() + "," + object.getyOne() + ") and (" + object.getxTwo() + "," + object.getyTwo() + ") is " + object.getDist());
 		
 		object.setxOne(5);
 		object.setyOne(5);
 		object.setxTwo(10);
 		object.setyTwo(10);
 		
-		System.out.println("The distance between (" + object.getxOne() + "," + object.getyOne() + ") and (" + object.getxTwo() + "," + object.getyTwo() + ") is " + object.getdist());
+		System.out.println("The distance between (" + object.getxOne() + "," + object.getyOne() + ") and (" + object.getxTwo() + "," + object.getyTwo() + ") is " + object.getDist());
 		
 	}
 }

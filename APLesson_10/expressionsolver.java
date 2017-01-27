@@ -11,7 +11,6 @@ public class expressionsolver
 		String expression = kb.nextLine();
 		ArrayList<String>equation = new ArrayList<>(Arrays.asList(expression.split(" ")));
 		doequation(equation);
-		System.out.println(equation);
 	}
 	
 	public static void doequation(ArrayList<String>equation)
@@ -34,7 +33,17 @@ public class expressionsolver
 					equation.remove(i);
 				}
 			}
-			else if(equation.get(i).equals("+") || equation.get(i).equals("-"))
+			
+			else
+			{
+				i++;
+			}
+		}
+		
+		i=0;
+		while(i < equation.size())
+		{
+			if(equation.get(i).equals("+") || equation.get(i).equals("-"))
 			{
 				if(equation.get(i).equals("+"))
 				{
@@ -54,5 +63,6 @@ public class expressionsolver
 				i++;
 			}
 		}
+		System.out.println(equation);
 	}
 }

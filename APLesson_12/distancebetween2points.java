@@ -28,7 +28,7 @@ public class distancebetween2points
 	   xOne = xO;
 	}
     
-	public void setOne(int yO)
+	public void setyOne(int yO)
    {
 	   yOne = yO;
    }
