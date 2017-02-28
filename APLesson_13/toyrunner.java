@@ -3,13 +3,10 @@ public class toyrunner
 {
 	public static void main(String[]args)
 	{
-		ArrayList<toy>toylist = new ArrayList<toy>();
-		toylist.add(new car("hot wheels"));
-		toylist.add(new figure("snow white"));
+		figure fobject = new figure("woody");
+		car cobject = new car("porsche");
 		
-		for(toy t : toylist)
-		{
-			System.out.println(t);
-		}
+		System.out.println(fobject);
+		System.out.println(cobject);
 	}
 }
