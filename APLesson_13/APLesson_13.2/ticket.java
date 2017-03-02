@@ -16,8 +16,8 @@ public abstract class ticket
 		return serialno;
 	}
 	
-	public String tostring()
+	public String toString()
 	{
-		return "Serial #: " + getserialno() + "\nPrice: " + getprice();
+		return "\nSerial #: " + getserialno() + "\nPrice: " + getprice();
 	}
 }

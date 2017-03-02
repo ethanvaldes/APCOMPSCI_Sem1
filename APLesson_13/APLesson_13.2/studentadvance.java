@@ -20,8 +20,8 @@ public class studentadvance extends advance
 		return super.getprice()/2;
 	}
 	
-	public String tostring()
+	public String toString()
 	{
-		return super.tostring() + "\n(STUDENT ID REQUIRED)";
+		return super.toString() + "\n(STUDENT ID REQUIRED)";
 	}
 }
