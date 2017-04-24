@@ -24,8 +24,27 @@ public class driver2
        { 
            printout += "\nDistance for " + l.getID() + ": (" + getDistance(l.getLoc(), home)+ ")";
        }
+	   
+	   printout += "\n\n" + "==========================";
 
-       System.out.println(printout);
+       for (location2 l : locate)
+	   {
+		   double xnew = Math.round((1 + (Math.random() * 100)) * 100.00)/100.00;
+		   double ynew = Math.round((1 + (Math.random() * 100)) * 100.00)/100.00;
+		   double[] moves = {xnew, ynew};
+		   printout += "\nAfter " + l.getID() + " Moved " + getLocation(moves);
+		   l.move(xnew,2*ynew);
+		   printout += "\nNew Location: (" + getLocation(l.getLoc()) + ")\n";
+	   }
+	   
+	   printout += "\n\n" + "==========================" + "\nDistance from home...";
+		
+	   for (location2 l : locate)
+	   {
+			printout += "\n\tDistance for " + l.getID() + ": (" + getDistance(l.getLoc(), home)+ ")"; 
+	   }
+		
+		System.out.println(printout);
    }
 
    public static double getDistance(double[] car, double[] home)

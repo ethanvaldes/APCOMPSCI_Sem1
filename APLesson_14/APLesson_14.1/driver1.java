@@ -25,16 +25,35 @@ public class driver1
            printout += "\nDistance for " + l.getID() + ": (" + getDistance(l.getLoc(), home)+ ")";
        }
 
-       System.out.println(printout);
+       printout += "\n\n" + "==========================";
+	   
+	   for (location1 l : locate)
+	   {
+		   double xnew = Math.round((1 + (Math.random() * 100)) * 100.00)/100.00;
+		   double ynew = Math.round((1 + (Math.random() * 100)) * 100.00)/100.00;
+		   double[] moves = {xnew, ynew};
+		   printout += "\nAfter " + l.getID() + " Moved " + getLocation(moves);
+		   ((car1os)l).move(xnew,2*ynew);
+		   printout += "\nNew Location: (" + getLocation(l.getLoc()) + ")\n";
+	   }
+	   
+	   printout += "\n\n" + "==========================" + "\nDistance from home...";
+		
+	   for (location1 l : locate)
+	   {
+			printout += "\n\tDistance for " + l.getID() + ": (" + getDistance(l.getLoc(), home)+ ")"; 
+	   }
+		
+		System.out.println(printout);
    }
 
-   public static double getDistance(double[] car, double[] home)
+   public static String getDistance(double[] car, double[] home)
    {
-       return Math.sqrt((Math.pow(car[0] - home[0], 2)+ Math.pow(car[1] - home[1], 2)));
+       return String.format("%.2f", Math.sqrt(Math.pow(car[0] - home[0], 2)+ Math.pow(car[1] - home[1], 2)));
    }
 
    public static String getLocation(double[] loc)
    {
-       return loc[0] + ", " + loc[1];
+       return String.format("(%.2f, %.2f)", loc[0], loc[1]);
    }
 }
