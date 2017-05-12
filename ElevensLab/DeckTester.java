@@ -10,13 +10,12 @@ public class DeckTester
 	 */
 	public static void main(String[] args) 
 	{
-		Deck one = new Deck("3", "Hearts", 3);
- 		Deck two = new Deck("2", "Spades",3);
-  		Deck three = new Deck("3", "Hearts", 3);
-  
-  		System.out.println("One matches two?" + one.matches(two));
- 		System.out.println("One matches three?" + one.matches(three));    
- 		System.out.println("Suit of Card One: " + one.suit());
-  		System.out.println("Card one: " + one.toString());
+		String[] ranks = {"Jack", "Queen", "King"};
+		String[] suits = {"Clubs", "Spades", "Diamonds", "Hearts"};
+		int[] values = {11, 12, 13}; 
+	
+		Deck deck = new Deck(ranks, suits, values);
+		
+		System.out.println(deck.deal());
 	}
 }

@@ -8,8 +8,6 @@ public class Shuffler {
 	 * to each sorting procedure.
 	 */
 	private static final int SHUFFLE_COUNT = 1;
-
-
 	/**
 	 * Tests shuffling methods.
 	 * @param args is not used.
@@ -55,8 +53,7 @@ public class Shuffler {
  		int mid = (values.length + 1) / 2;
 
   		int unshuffledPos = 0;
-  		int k = 0;
-  		
+		int k = 0;
   		for ( ; k < mid; k++) 
   		{
    			temp[unshuffledPos] = values[k];
@@ -64,13 +61,11 @@ public class Shuffler {
   		}
   		
  		unshuffledPos = 1;
- 		
   		for ( ; k < values.length; k++) 
   		{
  			temp[unshuffledPos] = values[k];
    			unshuffledPos += 2;
  		}
- 		
   		for (k = 0; k < values.length; k++) 
   		{
    			values[k] = temp[k];

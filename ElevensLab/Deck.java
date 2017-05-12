@@ -6,7 +6,8 @@ import java.util.ArrayList;
  * It provides several operations including
  *      initialize, shuffle, deal, and check if empty.
  */
-public class Deck {
+public class Deck 
+{
 
 	/**
 	 * cards contains all the cards in the deck.
@@ -19,7 +20,6 @@ public class Deck {
 	 * The next card to be dealt is at size - 1.
 	 */
 	private int size;
-
 
 	/**
 	 * Creates a new <code>Deck</code> instance.<BR>
@@ -40,12 +40,10 @@ public class Deck {
    				cards.add(new Card(ranks[j], suitString, values[j]));
    			}
   		}
-  		
   		size = cards.size();
   		shuffle();
 	}
-
-
+	
 	/**
 	 * Determines if this deck is empty (no undealt cards).
 	 * @return true if this deck is empty, false otherwise.
@@ -70,11 +68,12 @@ public class Deck {
 	 */
 	public void shuffle() 
 	{
-		for(int k = valueCount - 1; k >= 0; k--)
+		for(int k = size - 1; k >= 0; k--)
 		{
-            int r = (int)(Math.random() * k);    
-            values[r] = values[k];
-            values[k] = temp;
+            int r = (int)(Math.random() * k); 
+			Card temp = cards.get(r);
+			cards.set(r, cards.get(k));
+			cards.set(k, temp);
         }
 	}
 
@@ -89,9 +88,9 @@ public class Deck {
 		{
    			return null;
   		}
-  	size--;
-  	Card c = cards.get(size);
-  	return c;
+		size--;
+		Card c = cards.get(size);
+		return c;
 	}
 
 	/**
